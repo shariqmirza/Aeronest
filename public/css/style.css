@@ -1,0 +1,82 @@
+body{
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+/* Navbar */
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.fa-plane{
+    color: rgb(209, 39, 48);
+}
+.nav-link{
+    color: rgb(32, 30, 30) !important;
+}
+.nav-link:hover{
+    color: rgb(209, 39, 48) !important;
+}
+/* Footer */
+.f-info{
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: grey;
+}
+.f-info-socials i{
+    font-size: 1.5rem;
+    color: rgb(29, 27, 27);
+    margin: 1rem;
+}
+.f-info-socials i:hover{
+    color: rgb(209, 39, 48);
+    cursor: pointer;
+}
+.f-info > div:first-of-type a {
+    text-decoration: none !important;
+    color: black;
+}
+/* Cards */
+.listing-card{
+    margin: 10px;
+    border: none !important;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.listing-links{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+/* New Listing Form */
+.add-btn{
+    background-color: rgb(209, 39, 48) !important;
+    border: none !important;
+}
+/* Show Page */
+.show-image{
+    height: 30vh;
+}
+
+.btn-auth{
+    display: flex;
+}
+
