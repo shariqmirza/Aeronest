@@ -48,8 +48,8 @@
       </div>
 
     </div>
-    <!-- <div class="btn-auth">
-      <% if(!currUser) { %>
+    <div class="btn-auth">
+      <% if (typeof currUser === 'undefined' || !currUser) { %>
         <form action="/signup" class="m-2">
           <button class="btn btn-outline-danger btn-sm">Sign up</button>
         </form>
@@ -61,6 +61,6 @@
             <button class="btn">Log out</button>
           </form>
           <% } %>
-    </div> -->
+    </div>
   </div>
 </nav>

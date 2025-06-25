@@ -51,7 +51,7 @@ async function main() {
 const store = MongoStore.create({
     mongoUrl: DB_URL,
     crypto:{
-        secret: process.env.secret,
+        secret: process.env.SECRET,
     },
     touchAfter: 24 * 3600
 })
@@ -62,7 +62,7 @@ store.on("error", ()=>{
 
 const sessionOptions = {
     store,
-    secret: process.env.secret,
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie:{
@@ -90,6 +90,8 @@ app.use((req, res, next) => {
     res.locals.success = req.flash("success")
     res.locals.error = req.flash("error");
     res.locals.currUser = req.user || null;
+    // console.log("currUser:", req.locals.currUser)
+    console.log("currUser:", req.user)
     next();
 })
 
