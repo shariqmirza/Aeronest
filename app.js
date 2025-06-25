@@ -91,7 +91,7 @@ app.use((req, res, next) => {
     res.locals.error = req.flash("error");
     res.locals.currUser = req.user || null;
     // console.log("currUser:", req.locals.currUser)
-    console.log("currUser:", req.user)
+    // console.log("currUser:", req.user)
     next();
 })
 
