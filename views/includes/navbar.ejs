@@ -48,7 +48,7 @@
       </div>
 
     </div>
-    <!-- <div class="btn-auth">
+    <div class="btn-auth">
       <% if(!currUser) { %>
         <form action="/signup" class="m-2">
           <button class="btn btn-outline-danger btn-sm">Sign up</button>
@@ -63,22 +63,8 @@
               <button class="btn">Log out</button>
             </form>
             <% } %>
-    </div> -->
-    <div class="btn-auth">
-      <% if (typeof currUser !=="undefined" && currUser) { %>
-        <form action="/logout" class="m-2">
-          <button class="btn">Log out</button>
-        </form>
-
-        <% } else { %>
-          <form action="/signup" class="m-2">
-            <button class="btn btn-outline-danger btn-sm">Sign up</button>
-          </form>
-          <form action="/login" class="m-2">
-            <button class="btn btn-outline-success btn-sm">Log in</button>
-          </form>
-          <% } %>
     </div>
+    
 
   </div>
 </nav>
