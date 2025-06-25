@@ -36,6 +36,9 @@
             align-items: center;
             justify-content: center;
         }
+        .original-price{
+            display: inline;
+        }
     </style>
 
     <body>
@@ -95,8 +98,9 @@
                             <p><b>
                                     <%= listing.title %>
                                 </b></p>
-                            <p>Price &#8377;<%= listing.price.toLocaleString("en-IN") %>/Night
-                                    <i class="tax-info">&nbsp; &nbsp;+18 GST</i>
+                            <p class="original-price">Price &#8377;<%= listing.price.toLocaleString("en-IN") %>/Night
+                                    <i class="tax-info">&nbsp; &nbsp;+<%= (listing.price * 18 / 100).toLocaleString("en-IN") %>GST
+</i>
                             </p>
 
                         </div>
@@ -122,8 +126,10 @@
                 if (info.style.display != "inline") {
                     info.style.display = "inline"
                 } else {
-                    info.style.display = "none"
+                    info.style.display = "none";
+                    
                 }
             }
         })
+        
     </script>
