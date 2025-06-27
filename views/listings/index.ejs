@@ -42,6 +42,34 @@
             display: inline;
         }
 
+        /* Collapse filters on small screens */
+@media (max-width: 768px) {
+  #filters {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .show-filters {
+    display: flex !important;
+  }
+
+  .filter {
+    width: 22%;
+    text-align: center;
+  }
+
+  .tax-toggle {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  
+}
+
+
+
         
     </style>
 
