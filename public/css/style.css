@@ -79,4 +79,137 @@ body{
 .btn-auth{
     display: flex;
 }
+.btn{
+    border-radius: 1rem !important;
+    font-size: .8rem !important;
+    line-height: 1 !important;
+    font-weight: 625 !important;
+}
+
+
+
+/* footer media query */
+@media (max-width: 768px) {
+  .f-info {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .f-info > div:first-of-type {
+    font-size: 0.9rem;
+  }
+
+  .f-info-socials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .f-info-socials i {
+    margin: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* navbar media query */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: white; /* or any color matching your theme */
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .search-inp {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .btn-search {
+    width: 100%;
+  }
+
+  .navbar-nav {
+    align-items: center;
+  }
+
+  .navbar-nav form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar-nav .btn {
+    margin-top: 0.3rem;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    text-align: center;
+  }
+  .btn-auth{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* for listings */
+@media (max-width: 768px) {
+  /* === FILTERS === */
+  #filters {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .show-filters {
+    display: flex !important;
+  }
+
+  .filter {
+    width: 22%;
+    text-align: center;
+  }
+
+  .tax-toggle {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  /* === CARDS (2 per row) === */
+  .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+
+  }
+
+  .listing-card {
+    
+    width: 98% !important; /* Two cards in one row with small gap */
+    margin: 1%;
+  }
+
+  .card-img-top {
+    height: 10rem;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 0.5rem !important;
+  }
+
+  .original-price {
+    font-size: 0.9rem;
+  }
+
+  .tax-info {
+    display: inline-block;
+    font-size: 0.75rem;
+  }
+}
 

@@ -25,6 +25,8 @@
     border-radius: 2rem;
     padding: 0rem 3rem 0rem 3rem;
   }
+  
+
 </style>
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
@@ -46,15 +48,13 @@
           <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
         </form>
       </div>
-
-    </div>
-    <div class="btn-auth">
+        <div class="btn-auth">
       <% if (typeof currUser === 'undefined' || !currUser) { %>
-        <form action="/signup" class="m-2">
-          <button class="btn btn-outline-danger btn-sm">Sign up</button>
+        <form action="/signup" class=" m-2">
+          <button class="btn btn-outline-danger">Sign up</button>
         </form>
-        <form action="/login" class="m-2">
-          <button class="btn btn-outline-success btn-sm">Log in</button>
+        <form action="/login" class=" m-2">
+          <button class="btn btn-outline-success">Log in</button>
         </form>
         <% } else { %>
           <form action="/logout" class="m-2">
@@ -62,5 +62,7 @@
           </form>
           <% } %>
     </div>
+    </div>
+    
   </div>
 </nav>

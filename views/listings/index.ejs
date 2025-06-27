@@ -26,7 +26,8 @@
         .tax-info {
             display: none;
         }
-        .tax-toggle{
+
+        .tax-toggle {
             border: 1px solid black;
             border-radius: .5rem;
             height: 2.5rem;
@@ -36,13 +37,23 @@
             align-items: center;
             justify-content: center;
         }
-        .original-price{
+
+        .original-price {
             display: inline;
         }
+
+        
     </style>
 
     <body>
-        <div id="filters">
+        <!-- Toggle Button for Mobile -->
+        <button class="btn btn-outline-dark d-md-none mb-3 mt-3" id="filterToggle">
+            <i class="fa-solid fa-sliders"></i> Filters
+        </button>
+
+        <!-- Filters Container -->
+
+        <div id="filters" class="filters-collapse">
             <div class="filter">
                 <div><i class="fa-solid fa-fire"></i></div>
                 <p>Trending</p>
@@ -99,8 +110,9 @@
                                     <%= listing.title %>
                                 </b></p>
                             <p class="original-price">Price &#8377;<%= listing.price.toLocaleString("en-IN") %>/Night
-                                    <i class="tax-info">&nbsp; &nbsp;+<%= (listing.price * 18 / 100).toLocaleString("en-IN") %>GST
-</i>
+                                    <i class="tax-info">&nbsp; &nbsp;+<%= (listing.price * 18 /
+                                            100).toLocaleString("en-IN") %>GST
+                                    </i>
                             </p>
 
                         </div>
@@ -127,9 +139,16 @@
                     info.style.display = "inline"
                 } else {
                     info.style.display = "none";
-                    
+
                 }
             }
-        })
-        
+        });
+
+        let toggleBtn = document.getElementById("filterToggle");
+        let filtersBox = document.getElementById("filters");
+
+        toggleBtn.addEventListener("click", () => {
+            filtersBox.classList.toggle("show-filters");
+        });
+
     </script>
